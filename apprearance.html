@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="side-nav-area relative p-3 w-16 h-screen bg-white border-r">
+        <div class="logo w-10 h-10 rounded-full bg-gray-400 mx-auto"></div>
+        <div class="bottom-section absolute bottom-0 py-4">
+          <div
+            class="notification w-10 h-10 rounded-full bg-gray-400 mb-4"
+          ></div>
+          <div class="profile w-10 h-10 rounded-full bg-gray-400"></div>
+        </div>
+      </div>
+      <div class="menu-area border-r h-screen w-3/5">
+        <nav class="bg-white px-8 h-16 border-b py-8 flex items-center">
+          <a class="capitalize text-lg mr-4" href="index.html">links</a>
+          <a class="capitalize text-lg mr-4" href="apprearance.html"
+            >appearance</a
+          >
+          <a class="capitalize text-lg mr-4" href="#">settings</a>
+        </nav>
+        <div class="px-12 h-full overflow-y-scroll pb-48">
+          <div class="profile mt-12">
+            <p class="text-2xl font-medium capitalize mb-4 ">profile</p>
+            <div class="profile-area flex flex-col bg-white p-8 rounded-md">
+              <div class="flex items-center justify-between mb-4">
+                <div class="profile-avatar mr-4"><p class="uppercase w-[100px] text-center">k</p></div>
+                <div class="button-area flex items-center w-full">
+                  <button class="btn-1 text-white w-full mr-4">
+                    Pick an image
+                  </button>
+                  <button class="btn-3 text-grey-400 w-full">Remove</button>
+                </div>
+              </div>
+              <input
+                type="text"
+                class="mb-4 border-b outline-none"
+                placeholder="Profile Title"
+              />
+              <label>bio</label>
+              <textarea
+                rows="2"
+                class="border outline-none p-4"
+                placeholder="Enter a bio description to appear on your account"
+              ></textarea>
+            </div>
+          </div>
+          <div class="profile mt-20">
+            <p class="text-2xl font-medium capitalize mb-4">themes</p>
+            <div
+              class="nav bg-[#EBEEF1] rounded-t-3xl flex align-center justify-center"
+            >
+              <div
+                class="preset h-20 flex justify-center items-center w-full text-lg font-medium capitalize rounded-tl-3xl"
+              >
+                preset
+              </div>
+              <div
+                class="custom h-20 flex justify-center items-center w-full text-lg font-medium capitalize rounded-tr-3xl active"
+              >
+                custom
+              </div>
+            </div>
+            <div class="border-b py-8 bg-white text-center">
+              <p>
+                Fully customise the style of your background, buttons and fonts.
+              </p>
+            </div>
+            <div class="bg-white border-b p-8 pb-16">
+              <p class="capitalize mt-2 text-xl font-medium">background</p>
+              <p class="capitalize mt-6 text-md font-medium">style</p>
+              <div class="grid grid-cols-5 gap-x-8 mt-4 overflow-x-scroll">
+                <div>
+                  <div
+                    class="w-[120px] h-[180px] bg-[#3D444B] rounded-md"
+                  ></div>
+                  <p class="capitalize text-center">Flat colour</p>
+                </div>
+                <div>
+                  <div
+                    class="w-[120px] h-[180px] bg-[#3D444B] rounded-md"
+                  ></div>
+                  <p class="capitalize text-center">Flat colour</p>
+                </div>
+                <div>
+                  <div
+                    class="w-[120px] h-[180px] bg-[#3D444B] rounded-md"
+                  ></div>
+                  <p class="capitalize text-center">Flat colour</p>
+                </div>
+                <div>
+                  <div
+                    class="w-[120px] h-[180px] bg-[#3D444B] rounded-md"
+                  ></div>
+                  <p class="capitalize text-center">Flat colour</p>
+                </div>
+                <div>
+                  <div
+                    class="w-[120px] h-[180px] bg-[#3D444B] rounded-md"
+                  ></div>
+                  <p class="capitalize text-center">Flat colour</p>
+                </div>
+              </div>
+              <p class="capitalize mt-6 text-md font-medium">
+                background color
+              </p>
+              <div class="flex items-center mt-4 gap-x-2">
+                <input
+                  class="h-14 w-14 border-0 rounded-2xl bg-transparent outline-none"
+                  type="color"
+                  value="#C953C9"
+                  name="bg-picker"
+                  id="bg-picker"
+                />
+                <input
+                  type="text"
+                  value="#C953C9"
+                  class="px-4 h-12 w-32 border-black border rounded-md"
+                  name="bg-hex"
+                  id="bg-hex"
+                />
+              </div>
+              <p class="capitalize mt-6 text-md font-medium">direction</p>
+              <div class="flex flex-col">
+                <div class="radio-item">
+                  <input type="radio" id="ritema" name="ritem" value="ropt1" />
+                  <!-- <span class="grad-up"></span> -->
+                  <label for="ritema">Gradient up</label>
+                </div>
+
+                <div class="radio-item">
+                  <input type="radio" id="ritemb" name="ritem" value="ropt2" />
+                  <!-- <span class="grad-down"></span> -->
+                  <label for="ritemb">Gradient down</label>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border-b p-8 pb-16">
+              <p class="capitalize mt-2 text-xl font-medium">buttons</p>
+              <div class="fill">
+                <p class="capitalize mt-6 text-md font-medium mb-2">fill</p>
+                <div class="flex gap-2">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div class="w-full h-8 bg-black"></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div class="w-full h-8 bg-black rounded-xl"></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div class="w-full h-8 bg-black rounded-full"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-div">
+                <p class="capitalize mt-6 text-md font-medium mb-2">outline</p>
+                <div class="flex gap-2">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div class="w-full h-8 bg-white border border-black"></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div
+                      class="w-full h-8 bg-white border border-black rounded-xl"
+                    ></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div
+                      class="w-full h-8 bg-white border border-black rounded-full"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div class="soft-shadow">
+                <p class="capitalize mt-6 text-md font-medium mb-2">
+                  soft shadow
+                </p>
+                <div class="flex gap-2">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div class="w-full h-8 bg-white shadow-md"></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div class="w-full h-8 bg-white shadow-md rounded-xl"></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div
+                      class="w-full h-8 bg-white shadow-md rounded-full"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p class="capitalize mt-6 text-md font-medium mb-2">
+                  hard shadow
+                </p>
+                <div class="flex gap-2">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div
+                      class="w-full h-8 bg-white hd-shadow border border-black"
+                    ></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div
+                      class="w-full h-8 bg-white rounded-xl hd-shadow border border-black"
+                    ></div>
+                  </div>
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center"
+                  >
+                    <div
+                      class="w-full h-8 bg-white rounded-full hd-shadow border border-black"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <p class="capitalize mt-6 text-md font-medium">button color</p>
+              <div class="flex items-center mt-4 gap-x-2">
+                <input
+                  class="h-14 w-14 border-0 rounded-2xl bg-transparent outline-none"
+                  type="color"
+                  value="#EDEDED"
+                  name=""
+                  id=""
+                />
+                <input
+                  type="text"
+                  value="#EDEDED"
+                  class="px-4 h-12 w-32 border-black border rounded-md"
+                />
+              </div>
+              <p class="capitalize mt-6 text-md font-medium">
+                button font color
+              </p>
+              <div class="flex items-center mt-4 gap-x-2">
+                <input
+                  class="h-14 w-14 border-0 rounded-2xl bg-transparent outline-none"
+                  type="color"
+                  value="#888888"
+                  name=""
+                  id=""
+                />
+                <input
+                  type="text"
+                  value="#888888"
+                  class="px-4 h-12 w-32 border-black border rounded-md"
+                />
+              </div>
+            </div>
+            <div class="bg-white border-b p-8 pb-16">
+              <p class="capitalize mt-2 text-xl font-medium">fonts</p>
+              <p class="capitalize mt-6 text-md font-medium mb-2">
+                classic
+              </p>
+              <div class="gap-4 overflow-x-scroll flex flex-nowrap">
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+              </div>
+              <p class="capitalize mt-6 text-md font-medium mb-2">
+                unique
+              </p>
+              <div class="gap-4 overflow-x-scroll flex flex-nowrap">
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+                <div class="mb-4">
+                  <div
+                    class="h-24 w-24 bg-[#EBEEF1] rounded-xl p-3 flex items-center justify-center"
+                  >
+                   <p class="text-3xl font-medium w-24 text-center">Aa</p>
+                  </div>
+                  <p class="capitalize text-center text-sm mt-2">Flat colour</p>
+                </div>
+              </div>
+              <p class="capitalize mt-6 text-md font-medium">
+                button font color
+              </p>
+              <div class="flex items-center mt-4 gap-x-2">
+                <input
+                  class="h-14 w-14 border-0 rounded-2xl bg-transparent outline-none"
+                  type="color"
+                  value="#FFFFFF"
+                  name=""
+                  id=""
+                />
+                <input
+                  type="text"
+                  value="#FFFFFF"
+                  class="px-4 h-12 w-32 border-black border rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="link-area w-2/5">
+        <nav
+          class="bg-white px-8 h-16 border-b py-8 flex items-center justify-between"
+        >
+          <p>
+            <span class="font-medium text-md capitalize">my linktree:</span>
+            <a href="#">https://linktr.ee/kayzy</a>
+          </p>
+          <button class="px-2 py-1 border rounded-md capitalize">share</button>
+        </nav>
+        <div class="mt-20">
+          <div class="phone mx-auto"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="app.js"></script>
+  </body>
+</html>

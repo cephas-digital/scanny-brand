@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="flex">
+      <div class="side-nav-area relative p-3 w-16 h-screen bg-white border-r">
+        <div class="logo w-10 h-10 rounded-full bg-gray-400 mx-auto"></div>
+        <div class="bottom-section absolute bottom-0 py-4">
+          <div
+            class="notification w-10 h-10 rounded-full bg-gray-400 mb-4"
+          ></div>
+          <div class="profile w-10 h-10 rounded-full bg-gray-400"></div>
+        </div>
+      </div>
+      <div class="menu-area border-r h-screen w-3/5">
+        <nav class="bg-white px-8 h-16 border-b py-8 flex items-center">
+          <a class="capitalize text-lg mr-4" href="index.html">links</a>
+          <a class="capitalize text-lg mr-4" href="apprearance.html"
+            >appearance</a
+          >
+          <a class="capitalize text-lg mr-4" href="#">settings</a>
+        </nav>
+        <div class="mx-20 mt-12">
+          <div class="flex justify-between">
+            <button class="btn btn-1 w-full mr-4">add new link</button>
+            <button class="btn btn-2 w-full">explore</button>
+          </div>
+          <div class="mt-12 h-36 shadow-md rounded-md flex">
+            <div
+              class="button w-8 bg-white border-r rounded-tl-md rounded-bl-md"
+            ></div>
+            <div
+              class="new-link-content w-full bg-white rounded-tr-md rounded-br-md"
+            >
+              <div class="grid grid-cols-12 p-3">
+                <div class="col-span-11">
+                  <p class="text-md font-medium capitalize">title</p>
+                  <p class="text-md font-medium capitalize">Url</p>
+                </div>
+                <div class="col-span-1">nm</div>
+              </div>
+              <div class="grid grid-cols-12 p-3">
+                <div class="col-span-11 flex justify-around>
+                    <i class="fa-solid fa-file-image text-black"></i>
+                </div>
+                <div class="col-span-1">nm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="link-area w-2/5">
+        <nav
+          class="bg-white px-8 h-16 border-b py-8 flex items-center justify-between"
+        >
+          <p>
+            <span class="font-medium text-md capitalize">my linktree:</span>
+            <a href="#">https://linktr.ee/kayzy</a>
+          </p>
+          <button class="px-2 py-1 border rounded-md capitalize">share</button>
+        </nav>
+        <div class="mt-20">
+          <div class="phone mx-auto">
+            <div class="prof">K</div>
+            <p class="font-medium mt-1 text-sm">@kayzy</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
