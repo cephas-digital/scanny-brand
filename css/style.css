@@ -75,6 +75,19 @@ body {
   fill: rgba(172, 181, 191, .85);
 }
 
+.explore-modal {
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+} 
+
+.show-profile-modal {
+  display: none;
+}
+.show-nav {
+  display: none;
+}
+
+
 /* Appearance Section */
 
 .profile-avatar {
@@ -162,5 +175,10 @@ body {
   box-shadow: 4px 4px #000;
 }
 
-@media screen and (max-width: "970px") {
+@media screen and (max-width: 520px) {
+  .button-area {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap !important;
+  }
 }
