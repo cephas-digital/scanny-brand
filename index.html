@@ -4,77 +4,117 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="fontawesome-free-6.0.0-beta3-web/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Home</title>
   </head>
   <body>
-    <div class="flex">
-      <div class="side-nav-area relative p-3 w-16 h-screen bg-white border-r">
-        <div class="logo w-10 h-10 rounded-full bg-gray-400 mx-auto"></div>
-        <div class="bottom-section absolute bottom-0 py-4">
+    <div class="md:flex">
+    <!-- sidenav -->
+    <div
+      class="side-nav-area relative h-screen py-3 w-16 bg-white border-r hidden md:block"
+    >
+      <div class="logo w-10 h-10 mx-auto">
+        <img src="https://assets.production.linktr.ee/358dbeb18f0a2de43468b7acc316431c408c295e/images/logo_trees.svg" alt="">
+      </div>
+      <div class="bottom-section absolute bottom-0 left-1  py-4">
+        <div class="notification w-10 h-10 rounded-full mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18"><path d="M18.9 5.2l-.8-.2V.5c0-.2-.1-.4-.3-.4-.2-.1-.4-.1-.5 0C13.6 2.4 9.9 3.7 9.1 4c-.2-.2-.4-.3-.6-.3H2.9C1.3 3.7 0 5 0 6.6v3.1c0 1.5 1.2 2.8 2.8 2.8L2 17.4c0 .1 0 .3.1.4.1.1.3.2.4.2h2.8c.2 0 .4-.1.5-.4l1.5-5.1h1.2c.2 0 .5-.1.7-.2.8.2 4.6 1.5 8.2 3.9.1.1.2.1.3.1.1 0 .2 0 .2-.1.2-.1.3-.3.3-.4v-4.5l.8-.2c.7-.2 1.1-.7 1.1-1.4v-3c-.1-.8-.6-1.3-1.2-1.5zM4.9 17H3.1l.7-4.4h2.4L4.9 17zm3.5-5.4H2.9c-1 0-1.9-.8-1.9-1.9V6.6c0-1 .8-1.9 1.9-1.9h5.6c.1 0 .2.1.2.2v6.5c-.1.1-.2.2-.3.2zm8.7 3.3c-3.3-2-6.4-3.1-7.5-3.4V4.8c1-.3 4.2-1.5 7.5-3.4v13.5zM19 9.7c0 .2-.1.4-.4.4l-.5.1V6.1l.5.1c.2 0 .4.2.4.4v3.1z"></path></svg>
+        </div>
+        <div class="profile w-12 h-12 rounded-full bg-gray-400 flex justify-center items-center mx-auto"><p class="text-white font-medium text-xl">K</p></div>
+      </div>
+    </div>
+
+    <!-- mobile nav -->
+    <!-- <div></div> -->
+    <div class="flex justify-between md:hidden w-full p-2 bg-white border-b">
+        <div class="logo w-10 h-10">
+          <img src="https://assets.production.linktr.ee/358dbeb18f0a2de43468b7acc316431c408c295e/images/logo_trees.svg" alt="">
+
+        </div>
+        <div class="bottom-section flex">
           <div
-            class="notification w-10 h-10 rounded-full bg-gray-400 mb-4"
+            class="notification w-10 h-10 rounded-full bg-gray-400 mr-4"
           ></div>
           <div class="profile w-10 h-10 rounded-full bg-gray-400"></div>
         </div>
-      </div>
-      <div class="menu-area border-r h-screen w-3/5">
-        <nav class="bg-white px-8 h-16 border-b py-8 flex items-center">
-          <a class="capitalize text-lg mr-4" href="index.html">links</a>
-          <a class="capitalize text-lg mr-4" href="apprearance.html"
-            >appearance</a
-          >
-          <a class="capitalize text-lg mr-4" href="#">settings</a>
-        </nav>
-        <div class="mx-20 mt-12">
-          <div class="flex justify-between">
-            <button class="btn btn-1 w-full mr-4">add new link</button>
-            <button class="btn btn-2 w-full">explore</button>
-          </div>
-          <div class="mt-12 h-36 shadow-md rounded-md flex">
-            <div
-              class="button w-8 bg-white border-r rounded-tl-md rounded-bl-md"
-            ></div>
-            <div
-              class="new-link-content w-full bg-white rounded-tr-md rounded-br-md"
-            >
-              <div class="grid grid-cols-12 p-3">
-                <div class="col-span-11">
-                  <p class="text-md font-medium capitalize">title</p>
-                  <p class="text-md font-medium capitalize">Url</p>
-                </div>
-                <div class="col-span-1">nm</div>
-              </div>
-              <div class="grid grid-cols-12 p-3">
-                <div class="col-span-11 flex justify-around>
-                    <i class="fa-solid fa-file-image text-black"></i>
-                </div>
-                <div class="col-span-1">nm</div>
-              </div>
-            </div>
-          </div>
+    </div>
+
+
+    <!-- phone area -->
+    <div class="link-area w-full md:w-2/5 md:order-2">
+      <nav
+        class="bg-white px-2 md:px-8 h-16 border-b py-8 flex items-center justify-between"
+      >
+        <p>
+          <span class="font-medium text-sm md:text-md capitalize">my linktree:</span>
+          <a class="text-sm md:text-md" href="#">https://linktr.ee/kayzy</a>
+        </p>
+        <button class="px-2 py-1 border rounded-md capitalize">share</button>
+      </nav>
+      <div class="mt-20 hidden md:block">
+        <div class="phone mx-auto">
+          <div class="prof">K</div>
+          <p class="font-medium mt-1 text-sm">@kayzy</p>
         </div>
       </div>
-      <div class="link-area w-2/5">
-        <nav
-          class="bg-white px-8 h-16 border-b py-8 flex items-center justify-between"
+    </div>
+
+    <!-- middle -->
+    <div class="menu-area w-full md:w-3/5 border-r md:order-1">
+      <nav class="bg-white px-2 md:px-8 h-16 border-b py-8 flex items-center">
+        <a class="capitalize text-lg mr-4" href="index.html">links</a>
+        <a class="capitalize text-lg mr-4" href="apprearance.html"
+          >appearance</a
         >
-          <p>
-            <span class="font-medium text-md capitalize">my linktree:</span>
-            <a href="#">https://linktr.ee/kayzy</a>
-          </p>
-          <button class="px-2 py-1 border rounded-md capitalize">share</button>
-        </nav>
-        <div class="mt-20">
-          <div class="phone mx-auto">
-            <div class="prof">K</div>
-            <p class="font-medium mt-1 text-sm">@kayzy</p>
+        <a class="capitalize text-lg mr-4" href="#">settings</a>
+      </nav>
+      <div class="max-w-[640px] px-4 mx-auto mt-12">
+        <div class="flex justify-between">
+          <button class="btn btn-1 w-full mr-4">add new link</button>
+          <button class="btn btn-2 w-full flex justify-center items-center"><div class="flex justify-center">
+            <span>
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.6875" width="24" height="24" rx="12" fill="white"></rect><g clip-path="url(#clip0_4098_19559)"><path d="M19.458 8.55971C19.2926 7.94623 18.8153 7.467 18.2042 7.301C17.1048 7 12.6802 7 12.6802 7C12.6802 7 8.2556 7.00912 7.15626 7.31012C6.54518 7.47612 6.06783 7.95535 5.90247 8.56883C5.56994 10.5299 5.44093 13.5179 5.91156 15.4005C6.07691 16.014 6.55427 16.4932 7.16535 16.6592C8.26469 16.9602 12.6893 16.9602 12.6893 16.9602C12.6893 16.9602 17.1139 16.9602 18.2133 16.6592C18.8243 16.4932 19.3017 16.014 19.4671 15.4005C19.8178 13.4367 19.9259 10.4505 19.458 8.55971Z" fill="#FF0000"></path><path d="M11.272 14.1144L14.9425 11.98L11.272 9.8457V14.1144Z" fill="white"></path></g><defs><clipPath id="clip0_4098_19559"><rect width="14.1667" height="10" fill="white" transform="translate(5.60417 7)"></rect></clipPath></defs></svg>
+            </span>
+            <span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_4354_963)"><path d="M12.6416 3.42594C12.6305 3.35961 12.5764 3.30875 12.5094 3.30242C12.4566 3.29375 11.2976 3.2143 11.2976 3.2143L10.4141 2.3307C10.3344 2.24258 10.1581 2.26836 10.0916 2.28664C10.0829 2.28664 9.9153 2.33938 9.64109 2.42844C9.3746 1.65734 8.9028 0.950469 8.07171 0.950469H8.00069C7.76257 0.641797 7.47101 0.5 7.22491 0.5C5.28991 0.508672 4.36788 2.9218 4.07632 4.15484L2.72397 4.56969C2.30913 4.70188 2.2939 4.71148 2.23812 5.10711L1.09741 13.9004L9.6446 15.5L14.2766 14.5016C14.2766 14.4929 12.65 3.51008 12.6416 3.42617V3.42594ZM9.16718 2.57656C8.95226 2.64758 8.7071 2.71836 8.44296 2.79805V2.63867C8.45078 2.24098 8.39119 1.84483 8.26671 1.46703C8.69984 1.53359 8.99093 2.01945 9.16741 2.57633L9.16718 2.57656ZM7.74499 1.56922C7.88632 1.98594 7.95194 2.42469 7.93859 2.86461V2.9443L6.44444 3.40438C6.73694 2.31219 7.27648 1.77266 7.74523 1.56922H7.74499ZM7.17077 1.0318C7.25917 1.03368 7.34509 1.06129 7.41804 1.11125C6.7946 1.40141 6.13554 2.13453 5.85288 3.60195L4.67046 3.9643C5.00398 2.85078 5.7821 1.02969 7.17007 1.02969L7.17077 1.0318Z" fill="#95BF47"></path><path d="M12.5093 3.30253C12.4566 3.29386 11.2976 3.2144 11.2976 3.2144L10.414 2.33081C10.3812 2.29753 10.3366 2.27854 10.2905 2.27808L9.64546 15.5001L14.2774 14.5017L12.6415 3.43495C12.6362 3.4018 12.6205 3.37118 12.5968 3.34744C12.5731 3.3237 12.5424 3.30807 12.5093 3.30276V3.30253Z" fill="#5E8E3E"></path><path d="M8.07187 5.86481L7.49672 7.56216C7.14914 7.39388 6.76922 7.30341 6.38297 7.29661C5.48109 7.29661 5.43703 7.86192 5.43703 8.00395C5.43703 8.77692 7.46109 9.07364 7.46109 10.8945C7.46109 12.3265 6.55055 13.2453 5.32828 13.2453C3.86109 13.2453 3.10945 12.3347 3.10945 12.3347L3.49969 11.034C3.49969 11.034 4.26844 11.6972 4.92305 11.6972C5.0013 11.7002 5.07934 11.6873 5.15246 11.6592C5.22557 11.6312 5.29223 11.5886 5.34841 11.534C5.40459 11.4795 5.44911 11.4141 5.47929 11.3418C5.50947 11.2696 5.52467 11.1919 5.52398 11.1136C5.52398 10.0965 3.86226 10.0526 3.86226 8.39067C3.86226 6.99333 4.86961 5.63208 6.89367 5.63208C7.68914 5.6438 8.06977 5.86411 8.06977 5.86411L8.07187 5.86481Z" fill="white"></path></g><defs><clipPath id="clip0_4354_963"><rect width="15" height="15" fill="white" transform="translate(0.1875 0.5)"></rect></clipPath></defs></svg></span>
+            <span>
+              <svg viewBox="0 0 48 48"><path d="M23.985 14.75a9.249 9.249 0 0 0-9.25 9.248v1.011a3.235 3.235 0 0 1 1.75-.51h1.25a3.25 3.25 0 0 1 3.25 3.249v3.75a3.25 3.25 0 0 1-3.25 3.25h-1.25a3.25 3.25 0 0 1-3.25-3.25v-7.5a10.749 10.749 0 0 1 21.498 0l.001 3.749v3.75a3.25 3.25 0 0 1-3.25 3.25h-1.25a3.25 3.25 0 0 1-3.249-3.25v-3.749a3.25 3.25 0 0 1 3.25-3.25h1.25c.644 0 1.244.188 1.749.51v-1.01a9.25 9.25 0 0 0-9.25-9.249Zm9.25 12.997a1.75 1.75 0 0 0-1.75-1.749h-1.25a1.75 1.75 0 0 0-1.75 1.75v3.75c0 .966.784 1.75 1.75 1.75h1.25a1.75 1.75 0 0 0 1.75-1.75v-3.751Zm-18.5.001v3.75c0 .966.784 1.75 1.75 1.75h1.25a1.75 1.75 0 0 0 1.75-1.75v-3.75a1.75 1.75 0 0 0-1.75-1.75h-1.25a1.75 1.75 0 0 0-1.75 1.75Z"></path></svg>
+            </span>
+          </div>
+          <p class="mx-2">Explore</p>
+        </button>
+        </div>
+        <div class="mt-12 h-auto shadow-md rounded-md flex">
+          <div
+            class="button w-8 bg-white border-r rounded-tl-md rounded-bl-md"
+          ></div>
+          <div
+            class="new-link-content w-full bg-white rounded-tr-md rounded-br-md"
+          >
+            <div class="grid grid-cols-12 p-3">
+              <div class="col-span-11">
+                <p class="text-md font-medium capitalize">title</p>
+                <p class="text-md font-medium capitalize">Url</p>
+              </div>
+              <div class="col-span-1">nm</div>
+            </div>
+            <div class="grid grid-cols-12 p-3">
+              <div class="col-span-11 flex justify-around>
+              <i class="fa-solid fa-file-image text-black"></i>
+            </div>
+            <div class="col-span-1">nm</div>
           </div>
         </div>
       </div>
     </div>
+    </div>
+
+
+  </div>
 
     <script src="app.js"></script>
   </body>
