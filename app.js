@@ -34,38 +34,38 @@ menuBar.addEventListener("click", () => {
 });
 
 // toggle button
-let tgleBtn = window.getComputedStyle(
-  document.querySelector(".but"),
-  "::before"
-);
+// let tgleBtn = window.getComputedStyle(
+//   document.querySelector(".but"),
+//   "::before"
+// );
 // .getPropertyValue('left')
-let theBtn = document.querySelector(".but");
+// let theBtn = document.querySelector(".but");
 
-theBtn.addEventListener("click", () => {
-  tgleBtn.setProperty("left", "");
-  tgleBtn.setProperty("right", "2px !important");
-});
+// theBtn.addEventListener("click", () => {
+//   tgleBtn.setProperty("left", "");
+//   tgleBtn.setProperty("right", "2px !important");
+// });
 
-// delete link
-const deleteLink = document.querySelector("#delete-link");
-const linkBar = document.querySelector("#link-bar");
-const deleteBar = document.querySelector(".delete-bar");
-const deleteIcon = document.querySelector(".delete-icon");
-const cancelDel = document.querySelector(".link-cancel-delete");
-const linkDel = document.querySelector(".link-delete");
-deleteLink.addEventListener("click", () => {
-  deleteBar.classList.toggle("hide");
-  console.log("clicked");
-});
-deleteIcon.addEventListener("click", () => {
-  deleteBar.classList.add("hide");
-});
-cancelDel.addEventListener("click", () => {
-  deleteBar.classList.add("hide");
-});
-linkDel.addEventListener("click", () => {
-  linkBar.remove();
-});
+// // delete link
+// const deleteLink = document.querySelector("#delete-link");
+// const linkBar = document.querySelector("#link-bar");
+// const deleteBar = document.querySelector(".delete-bar");
+// const deleteIcon = document.querySelector(".delete-icon");
+// const cancelDel = document.querySelector(".link-cancel-delete");
+// const linkDel = document.querySelector(".link-delete");
+// deleteLink.addEventListener("click", () => {
+//   deleteBar.classList.toggle("hide");
+//   console.log("clicked");
+// });
+// deleteIcon.addEventListener("click", () => {
+//   deleteBar.classList.add("hide");
+// });
+// cancelDel.addEventListener("click", () => {
+//   deleteBar.classList.add("hide");
+// });
+// linkDel.addEventListener("click", () => {
+//   linkBar.remove();
+// });
 
 // add link
 const linkArea = document.querySelector(".link");
@@ -77,22 +77,28 @@ dell.innerHTML = `<svg viewBox="0 0 16 16" display="block" enable-background="ne
 let link = `
 <div class="mt-12 h-auto shadow-md flex">
 <div
-  class="button w-8 bg-white border-r rounded-l-md fill-[#acb5bf] text-md flex items-center justify-center"
+  class="w-8 bg-white border-r rounded-l-md fill-[#acb5bf] text-md flex items-center justify-center drag-button"
 >
   <svg viewBox="0 0 16 16" color="palette.blueGrey5" enable-background="new 0 0 24 24" class="hover:cursor-pointer h-4"><path d="M6 2C6 0.9 6.9 0 8 0C9.1 0 10 0.9 10 2C10 3.1 9.1 4 8 4C6.9 4 6 3.1 6 2M6 8C6 6.9 6.9 6 8 6C9.1 6 10 6.9 10 8C10 9.1 9.1 10 8 10C6.9 10 6 9.1 6 8M6 14C6 12.9 6.9 12 8 12C9.1 12 10 12.9 10 14C10 15.1 9.1 16 8 16C6.9 16 6 15.1 6 14"></path></svg>
 </div>
 <div
   class="new-link-content w-full bg-white rounded-tr-md rounded-br-md"
 >
-  <div class="grid grid-cols-12 p-3">
-    <div class="col-span-11">
-      <!-- <p class="text-md font-medium capitalize flex items-center">title <svg color="palette.slate4" font-style="italic" viewBox="0 0 12 12" enable-background="new 0 0 24 24" class="w-3 h-3 fill-[#acb5bf] ml-2"><path d="M2.5,6.67188,8.46477.70711a1,1,0,0,1,1.41421,0L11.29289,2.121a1,1,0,0,1,0,1.41421L5.32813,9.5ZM4.32813,10.5,0,12,1.5,7.67188Z"></path></svg></p> -->
-      <input type="text" placeholder="Title" class="w-full outline-none">
-      <input type="text" placeholder="Url" class="w-full outline-none">
-      <!-- <p class="text-md font-medium capitalize flex items-center">Url <svg color="palette.slate4" font-style="italic" viewBox="0 0 12 12" enable-background="new 0 0 24 24" class="w-3 h-3 fill-[#acb5bf] ml-2"><path d="M2.5,6.67188,8.46477.70711a1,1,0,0,1,1.41421,0L11.29289,2.121a1,1,0,0,1,0,1.41421L5.32813,9.5ZM4.32813,10.5,0,12,1.5,7.67188Z"></path></svg></p> -->
-    </div>
-    <div class="col-span-1">nm</div>
-  </div>
+<div class="grid grid-cols-12 p-3">
+<div class="col-span-11">
+  <input
+    type="text"
+    placeholder="Title"
+    class="w-full outline-none"
+  />
+  <input
+    type="text"
+    placeholder="Url"
+    class="w-full outline-none"
+  />
+</div>
+<div class="col-span-1 w-10 h-6 rounded-full bg-gray-300 flex items-center relative hover:cursor-pointer"><div class="but"></div></div>
+</div>
   <div class="grid grid-cols-12 p-3">
       <div class="fill-[#acb5bf]">
         <svg viewBox="0 0 16 16" display="block" enable-background="new 0 0 24 24" class="w-4 h-4"><g><path fill-rule="evenodd" clip-rule="evenodd" d="M1 5C1 3.34315 2.34315 2 4 2C5.65685 2 7 3.34315 7 5V8H4C2.34315 8 1 6.65685 1 5ZM4 1C6.20914 1 8 2.79086 8 5V8H13.7929L11.1464 5.35355L11.8536 4.64645L15.3536 8.14645V8.85355L11.8536 12.3536L11.1464 11.6464L13.7929 9H8V16H7V9H4C1.79086 9 0 7.20914 0 5C0 2.79086 1.79086 1 4 1Z" fill="currentColor"></path></g></svg>
@@ -140,31 +146,42 @@ let link = `
 `;
 
 addLinkBtn.addEventListener("click", (e) => {
-  let newLink = document.createElement("div");
+  let newLink = document.createElement("li");
   newLink.innerHTML = link;
   linkArea.append(newLink);
 
+  // let linksList = document.querySelector("#link-list").children;
 
   newLink.addEventListener("click", (e) => {
     let classes = e.target.classList;
 
-    for (item in classes) {
-      if (classes[item] === "delete-link") {
+    for (let item of classes) {
+      if (item === "delete-link") {
         newLink.children[1].classList.toggle("hide");
       }
-      if (
-        classes[item] === "link-cancel-delete" ||
-        classes[item] === "delete-icon"
-      ) {
+      if (item === "link-cancel-delete" || item === "delete-icon") {
         newLink.children[1].classList.add("hide");
       }
-      if (classes[item] === "link-delete") {
+      if (item === "link-delete") {
         newLink.remove();
+      }
+      if (item === "but") {
+        e.target.classList.toggle("but")
+        e.target.classList.toggle("butt")
+      }
+      if (item === "butt") {
+        e.target.classList.toggle("but")
+        e.target.classList.toggle("butt")
       }
     }
   });
 });
 
+new Sortable(linkArea, {
+  animation: 300,
+});
+
+// sort list with draag and drop
 
 // button color
 // button font color
