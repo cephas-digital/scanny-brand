@@ -40,8 +40,8 @@ body {
 }
 
 .phone {
-  width: 180px;
-  height: 350px;
+  width: 200px;
+  min-height: 400px;
   border: 10px solid #000;
   border-radius: 30px;
   display: flex;
@@ -106,6 +106,25 @@ body {
   background: #fff;
   border-radius: 50%;
   right: 2px;
+}
+
+.url:invalid {
+  border: red solid 0.05px;
+  border-radius: 4px;
+}
+
+.link-box {
+  background-color: #fff;
+  padding: 4px;
+  font-size: small;
+  font-weight: 500;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.success {
+  background: green !important;
 }
 
 

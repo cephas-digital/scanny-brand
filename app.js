@@ -11,9 +11,6 @@ exploreClose.addEventListener("click", () => {
   exploreModal.classList.toggle("explore-modal");
   console.log("working");
 });
-// exploreModal.addEventListener("click", () => {
-//     exploreModal.classList.toggle("explore-modal")
-// });
 
 // sidenav-profile
 const sidenavProfile = document.querySelector(".profile");
@@ -33,49 +30,12 @@ menuBar.addEventListener("click", () => {
   menuModal.classList.toggle("show-nav");
 });
 
-// toggle button
-// let tgleBtn = window.getComputedStyle(
-//   document.querySelector(".but"),
-//   "::before"
-// );
-// .getPropertyValue('left')
-// let theBtn = document.querySelector(".but");
-
-// theBtn.addEventListener("click", () => {
-//   tgleBtn.setProperty("left", "");
-//   tgleBtn.setProperty("right", "2px !important");
-// });
-
-// // delete link
-// const deleteLink = document.querySelector("#delete-link");
-// const linkBar = document.querySelector("#link-bar");
-// const deleteBar = document.querySelector(".delete-bar");
-// const deleteIcon = document.querySelector(".delete-icon");
-// const cancelDel = document.querySelector(".link-cancel-delete");
-// const linkDel = document.querySelector(".link-delete");
-// deleteLink.addEventListener("click", () => {
-//   deleteBar.classList.toggle("hide");
-//   console.log("clicked");
-// });
-// deleteIcon.addEventListener("click", () => {
-//   deleteBar.classList.add("hide");
-// });
-// cancelDel.addEventListener("click", () => {
-//   deleteBar.classList.add("hide");
-// });
-// linkDel.addEventListener("click", () => {
-//   linkBar.remove();
-// });
-
 // add link
 const linkArea = document.querySelector(".link");
 const addLinkBtn = document.querySelector(".add-new-link");
 
-let dell = document.createElement("div");
-dell.innerHTML = `<svg viewBox="0 0 16 16" display="block" enable-background="new 0 0 24 24" class="w-4 h-4 fill-[#acb5bf] hover:cursor-pointer" id="delete-link"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" d="M6 2.5v-2h4v2M1 2.5h14M9.533 13.5l.25-9M6.217 4.5l.25 9M2.661 4.5l.889 11h8.9l.888-11"></path></svg>`;
-
 let link = `
-<div class="mt-12 h-auto shadow-md flex">
+<div class="mt-12 h-auto shadow-md flex" link-state="false">
 <div
   class="w-8 bg-white border-r rounded-l-md fill-[#acb5bf] text-md flex items-center justify-center drag-button"
 >
@@ -90,11 +50,13 @@ let link = `
     type="text"
     placeholder="Title"
     class="w-full outline-none"
+    oninput="getTitle(event)"
   />
   <input
-    type="text"
+    type="url"
     placeholder="Url"
-    class="w-full outline-none"
+    class="w-full outline-none url"
+    oninput="getUrl(event)"
   />
 </div>
 <div class="col-span-1 w-10 h-6 rounded-full bg-gray-300 flex items-center relative hover:cursor-pointer"><div class="but"></div></div>
@@ -145,12 +107,14 @@ let link = `
 
 `;
 
+let allLinks = [];
+let allLinksList = [];
+
 addLinkBtn.addEventListener("click", (e) => {
   let newLink = document.createElement("li");
+
   newLink.innerHTML = link;
   linkArea.append(newLink);
-
-  // let linksList = document.querySelector("#link-list").children;
 
   newLink.addEventListener("click", (e) => {
     let classes = e.target.classList;
@@ -166,23 +130,80 @@ addLinkBtn.addEventListener("click", (e) => {
         newLink.remove();
       }
       if (item === "but") {
-        e.target.classList.toggle("but")
-        e.target.classList.toggle("butt")
+        let itemClass = e.target.parentNode.classList;
+        e.target.classList.toggle("but");
+        e.target.classList.toggle("butt");
+        newLink.setAttribute("link-state", "true");
+
+        addToList(newLink, itemClass);
       }
       if (item === "butt") {
-        e.target.classList.toggle("but")
-        e.target.classList.toggle("butt")
+        let itemClass = e.target.parentNode.classList;
+        e.target.classList.toggle("but");
+        e.target.classList.toggle("butt");
+        newLink.setAttribute("link-state", "false");
+        removeList(newLink, itemClass);
+        // console.log(newLink.getAttribute("link-state"));
       }
     }
   });
+  console.log(newLink.children[0].children[1].children[0].children[0].children);
 });
 
 new Sortable(linkArea, {
   animation: 300,
 });
+let linkTitle = "";
+let linkUrl = "";
+function getTitle(e) {
+  // console.log(e.target.value);
+  linkTitle = e.target.value;
+}
+function getUrl(e) {
+  if (e.target.validity.valid) {
+    linkUrl = e.target.value;
+  } else {
+    return "";
+  }
+}
 
-// sort list with draag and drop
+function addToList(link, itemClass) {
+  if (
+    link.children[0].children[1].children[0].children[0].children[0].value !==
+      "" &&
+    link.children[0].children[1].children[0].children[0].children[1].value !==
+      ""
+  ) {
+    allLinks.push({
+      title:
+        link.children[0].children[1].children[0].children[0].children[0].value,
+      url: link.children[0].children[1].children[0].children[0].children[1]
+        .value,
+    });
+    let linkStack = document.querySelector(".link-area-stack");
+    console.log(linkStack);
+    itemClass.add("success");
+    let links = document.createElement("a");
+    links.setAttribute("href", linkUrl);
+    links.classList.add("link-box");
+    links.innerText = linkTitle;
+    linkStack.appendChild(links);
+    // for (let it of allLinksList) {
+    //   allLinksList.push(links)
+    //   console.log(it.innerText);
+    // }
+    console.log(allLinks);
+  }
+}
 
-// button color
-// button font color
-// font color
+function removeList(link, itemClass) {
+  let inputValue =
+    link.children[0].children[1].children[0].children[0].children[0].value;
+
+  allLinks = allLinks.filter((links) => links.title !== inputValue);
+  itemClass.remove("success");
+  allLinksList = allLinksList.filter((links) => links.innerText !== "");
+
+  console.log(allLinks);
+  console.log(allLinksList);
+}
