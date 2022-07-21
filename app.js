@@ -147,7 +147,7 @@ addLinkBtn.addEventListener("click", (e) => {
       }
     }
   });
-  console.log(newLink.children[0].children[1].children[0].children[0].children);
+  // console.log(newLink.children[0].children[1].children[0].children[0].children);
 });
 
 new Sortable(linkArea, {

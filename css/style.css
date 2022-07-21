@@ -216,7 +216,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width: 520px) {
@@ -225,4 +225,12 @@ body {
     flex-direction: column;
     flex-wrap: wrap !important;
   }
+}
+
+.screen-box {
+ cursor: default;
+}
+
+.screen-box:hover {
+  background: #c4c4c441;
 }

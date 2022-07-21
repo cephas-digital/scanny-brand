@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="fontawesome-free-6.0.0-beta3-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My Link</title>
+  </head>
+  <body>
+    <div class="relative h-screen">
+      <div
+        class="absolute top-8 right-1/3 p-3 rounded-full border border-gray-400 cursor-pointer bg-gray-100 hover:bg-gray-200 share"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          enable-background="new 0 0 24 24"
+          class="sc-gKsewC iPWGYb"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M10.6464 3.85347L11 4.20702L11.7071 3.49992L11.3536 3.14636L8.35355 0.146362H7.64645L4.64645 3.14636L4.29289 3.49992L5 4.20702L5.35355 3.85347L7.5 1.70702V9.49992V9.99992H8.5V9.49992V1.70702L10.6464 3.85347ZM1 5.49994L1.5 4.99994H4V5.99994H2V14.9999H14V5.99994H12V4.99994H14.5L15 5.49994V15.4999L14.5 15.9999H1.5L1 15.4999V5.49994Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </div>
+      <section class="flex flex-col items-center p-8">
+        <div class="avatar mb-4">
+          <img
+            class="w-24 h-24 rounded-full object-cover"
+            src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+            alt="id"
+          />
+        </div>
+        <div class="profile text-center">
+          <p class="font-bold text-md">Akshay Somkuwar</p>
+          <p class="text-md font-normal">
+            Hello, I am Akshay Somkuwar. I am an iOS | MacOS | React Native
+            Developer
+          </p>
+        </div>
+      </section>
+      <div class="py-8 flex flex-col max-w-4xl mx-auto gap-4 px-4 grow">
+        <button
+          class="bg-slate-800 font-medium text-gray-100 h-14 rounded-lg"
+        >
+          Gmail
+        </button>
+        <button
+          class="bg-slate-800 font-medium text-gray-100 h-14 rounded-lg"
+        >
+          Linkedin
+        </button>
+        <button
+          class="bg-slate-800 font-medium text-gray-100 h-14 rounded-lg"
+        >
+          Instagram
+        </button>
+        <button
+          class="bg-slate-800 font-medium text-gray-100 h-14 rounded-lg"
+        >
+          Medium
+        </button>
+      </div>
+      <div class="absolute bottom-0 inset-x-0">
+        <p class="text-center font-medium text-3xl my-10">Scanny</p>
+      </div>
+
+      <!-- modal -->
+      <div class="fixed inset-0 flex items-center justify-center hide modal">
+        <div
+          class="fixed bg-slate-800 shadow-lg shadow-slate-400 text-white"
+        >
+          <div class="mx-4 px-8 py-4 border-b border-gray-200 mb-2">
+            <p class="text-center font-bold text-md">share</p>
+            <p class="text-center text-sm">Akshay Somkuwar | Scanny</p>
+          </div>
+          <div class="mx-4 py-4 border-b border-gray-200">
+            <div class="px-8 py-4 mb-2 screen-box">
+              <a
+                href="/link-screen.html"
+                class="text-center text-sky-600 font-bold text-sm"
+                ><p>No contact? No problem</p></a
+              >
+              <p class="text-center text-sm font-light">
+                Tap to start adding te most important people to you
+              </p>
+            </div>
+          </div>
+          <div class="py-4 mx-4 border-b border-gray-200">
+            <div class="px-8 py-4 mb-2 screen-box">
+                <a
+                href="/link-screen.html"
+                class="text-center text-sky-600 font-bold text-sm"
+                ><p>Select to turn on nearby sharing</p></a
+              >
+              <p class="text-center text-sm font-light">Share to  nearby device using bluetooth or wi-fi</p>
+            </div>
+          </div>
+          <div class="flex mb-10 p-4">
+            <div class="p-4 mb-2 screen-box">
+              <p class="font-mediun text-sm">one note</p>
+            </div>
+            <div class="p-4 mb-2 screen-box">
+              <p class="font-mediun text-sm">one note</p>
+            </div>
+            <div class="p-4 mb-2 screen-box">
+              <p class="font-mediun text-sm">one note</p>
+            </div>
+            <div class="p-4 mb-2 screen-box">
+              <p class="font-mediun text-sm">one note</p>
+            </div>
+          </div>
+          <div class="text-sky-600 hover:text-white text-md p-3 border-t border-gray-100">
+            <p class="text-center">Get apps in store</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app4.js"></script>
+  </body>
+</html>
